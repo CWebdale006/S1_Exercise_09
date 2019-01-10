@@ -20,6 +20,7 @@
     <title>Red Ball Survey</title>
     <link href="rb_reset.css" rel="stylesheet" />
     <link href="rb_styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="rb_forms.css" />
     <script src="rb_formsubmit.js"></script>
 </head>
 
@@ -53,6 +54,7 @@
             parties, <em>ever</em>. </p>
         <p>Required values are marked by an asterisk (*)</p>
 
+        <!--Survery 1 -->
         <form id="survey" action="http://www.example.com/redball/Survey" method="POST">
             <fieldset id="custInfo">
                 <legend>Customer Information</legend>
@@ -72,7 +74,7 @@
                 </div>
 
                 <div class="formRow">
-                    <label for="State">State</label>
+                    <label for="state">State</label>
                     <input name="custState" id="state" type="text" value="FL" />
                 </div>
 
@@ -89,6 +91,17 @@
                 <div class="formRow">
                     <label for="mail">Email*</label>
                     <input name="custEmail" id="mail" type="email" />
+                </div>
+
+                <div class="formRow">
+                    <label for="info">Where did you hear about us? <br> (select all that apply)</label>
+                    <select name="infoSrc" id="info" size="5" multiple>
+                        <option value="internet">Internet</option>
+                        <option value="mag">Magazine</option>
+                        <option value="news">Newspaper</option>
+                        <option value="word">Word of Mouth</option>
+                        <option value="other">Other</option>
+                    </select>
                 </div>
 
                 <div class="formRow">
@@ -110,9 +123,11 @@
                 </div>
 
                 <input name="mailMe" id="mailCB" value="yes" type="checkbox" />
-                <label for="mailCB">Add me to your mailing list for great coupons and specials. </label>
+                <label for="mailCB">Add me to your mailing list for great coupons and specials.
+                </label>
             </fieldset>
 
+            <!--Survey 2-->
             <fieldset id="expInfo">
                 <legend>Share Your Experience at the Red Ball Pizza</legend>
 
@@ -135,9 +150,9 @@
                     <label>Was your service friendly?</label>
                     <fieldset class="optGroup">
                         <label for="fYes">Yes</label>
-                        <input name="sFriend" id="fYes" value="yes" type="radio" />
+                        <input name="sFriend" id="fYes" value="Yes" type="radio" />
                         <label for="fNo">No</label>
-                        <input name="sFriend" id="fNo" value="no" type="radio" />
+                        <input name="sFriend" id="fNo" value="No" type="radio" />
                     </fieldset>
                 </div>
 
@@ -145,9 +160,9 @@
                     <label>Was your order correct?</label>
                     <fieldset class="optGroup">
                         <label for="cYes">Yes</label>
-                        <input name="oCorrect" id="cYes" value="yes" type="radio" />
+                        <input name="oCorrect" id="cYes" value="Yes" type="radio" />
                         <label for="cNo">No</label>
-                        <input name="oCorrect" id="cNo" value="no" type="radio" />
+                        <input name="oCorrect" id="cNo" value="No" type="radio" />
                     </fieldset>
                 </div>
 
@@ -155,9 +170,9 @@
                     <label>Was your food hot?</label>
                     <fieldset class="optGroup">
                         <label for="hYes">Yes</label>
-                        <input name="foodHot" id="hYes" value="yes" type="radio" />
+                        <input name="foodHot" id="hYes" value="Yes" type="radio" />
                         <label for="hNo">No</label>
-                        <input name="foodHot" id="hNo" value="no" type="radio" />
+                        <input name="foodHot" id="hNo" value="No" type="radio" />
                     </fieldset>
                 </div>
 
